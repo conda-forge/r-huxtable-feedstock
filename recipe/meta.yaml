@@ -1,4 +1,4 @@
-{% set version = '3.0.0' %}
+{% set version = "4.0.0" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/huxtable_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/huxtable/huxtable_{{ version }}.tar.gz
-  sha256: fe8db4bdf57a243b42340b5d0c7db23f2aae1cea406e7c5bb6101a96ba49656d
+  sha256: 4b762ba69f1149f56e28b3e610bd865c103c68ab651be6abe5eaa7e4cc256a35
 
 build:
   number: 0
