@@ -1,4 +1,4 @@
-{% set version = "4.6.0" %}
+{% set version = '4.6.1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/huxtable_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/huxtable/huxtable_{{ version }}.tar.gz
-  sha256: 0bf62e0dd852ad65e60fb941c8284376231d70d7263ed54f3af8b374ccfe8db5
+  sha256: 829a948168d51012d2926b9f717a6445bafa30998e6335a5a40b726e094c6ca4
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -26,7 +26,7 @@ requirements:
   host:
     - r-base
     - r-assertthat
-    - r-broom
+    - r-generics
     - r-glue
     - r-memoise
     - r-rlang
@@ -36,7 +36,7 @@ requirements:
   run:
     - r-base
     - r-assertthat
-    - r-broom
+    - r-generics
     - r-glue
     - r-memoise
     - r-rlang
@@ -58,6 +58,9 @@ about:
     columns. Includes  a 'huxreg' function for creation of regression tables, and 'quick_*'  one-liners
     to print data to a new document.
   license_family: MIT
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - LICENSE
 
 extra:
   recipe-maintainers:
@@ -66,7 +69,7 @@ extra:
 # Type: Package
 # Package: huxtable
 # Title: Easily Create and Style Tables for LaTeX, HTML and Other Formats
-# Version: 4.3.0
+# Version: 4.6.1
 # Authors@R:  person(given = "David", family = "Hugh-Jones", role = c("aut", "cre"), email = "davidhughjones@gmail.com")
 # Author: David Hugh-Jones [aut, cre]
 # Maintainer: David Hugh-Jones <davidhughjones@gmail.com>
@@ -74,13 +77,13 @@ extra:
 # License: MIT + file LICENSE
 # URL: https://hughjonesd.github.io/huxtable
 # BugReports: https://github.com/hughjonesd/huxtable/issues
-# Imports: assertthat, broom, glue, memoise, rlang, stats, stringr (>= 1.2.0), tibble, tidyselect, utils
-# Suggests: bookdown, covr, crayon, devtools, dplyr, flextable, ggplot2, httr, knitr, lazyeval, lme4, lmtest, nlme, nnet, officer, openxlsx, psych, rmarkdown, sandwich, scales, testthat, tinytex
+# Imports: assertthat, generics, glue, memoise, rlang, stats, stringr (>= 1.2.0), tibble, tidyselect, utils
+# Suggests: bookdown, broom (>= 0.5.1), broom.mixed, covr, crayon, devtools, dplyr, flextable, ggplot2, httr, knitr, lazyeval, lme4, lmtest, nlme, nnet, officer, openxlsx, psych, rmarkdown, sandwich, scales, testthat, tinytex
 # VignetteBuilder: knitr
 # Encoding: UTF-8
 # LazyData: true
-# RoxygenNote: 6.1.0
+# RoxygenNote: 6.1.1
 # NeedsCompilation: no
-# Packaged: 2018-11-07 10:16:20 UTC; david
+# Packaged: 2019-08-06 10:30:25 UTC; david
 # Repository: CRAN
-# Date/Publication: 2018-11-07 11:00:02 UTC
+# Date/Publication: 2019-08-06 10:50:02 UTC
