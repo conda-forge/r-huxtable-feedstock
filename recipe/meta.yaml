@@ -26,22 +26,22 @@ requirements:
   host:
     - r-base
     - r-assertthat
+    - r-commonmark
     - r-generics
     - r-glue
     - r-memoise
     - r-rlang
     - r-stringr >=1.2.0
-    - r-tibble
     - r-tidyselect
   run:
     - r-base
     - r-assertthat
+    - r-commonmark
     - r-generics
     - r-glue
     - r-memoise
     - r-rlang
     - r-stringr >=1.2.0
-    - r-tibble
     - r-tidyselect
 
 test:
