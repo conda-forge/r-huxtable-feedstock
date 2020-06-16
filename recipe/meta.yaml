@@ -1,4 +1,4 @@
-{% set version = "4.7.1" %}
+{% set version = "5.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/huxtable_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/huxtable/huxtable_{{ version }}.tar.gz
-  sha256: 505e03ae027890a246812321461c51b0e17963de2b6d76fc72e013b8ef347d5a
+  sha256: 01ae63111516e6607757d5e278339eb1474dee157b08f670f7550e67b1fd2a2d
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -26,22 +26,22 @@ requirements:
   host:
     - r-base
     - r-assertthat
+    - r-commonmark
     - r-generics
     - r-glue
     - r-memoise
     - r-rlang
     - r-stringr >=1.2.0
-    - r-tibble
     - r-tidyselect
   run:
     - r-base
     - r-assertthat
+    - r-commonmark
     - r-generics
     - r-glue
     - r-memoise
     - r-rlang
     - r-stringr >=1.2.0
-    - r-tibble
     - r-tidyselect
 
 test:
@@ -52,14 +52,11 @@ test:
 about:
   home: https://hughjonesd.github.io/huxtable
   license: MIT
-  summary: Like 'xtable', creates styled tables. Export to HTML, LaTeX, 'Word',  'Excel', 'PowerPoint'
-    and RTF. Simple, modern interface to manipulate  borders, size, position, captions,
-    colours, text styles and number formatting. Table cells can span multiple rows and/or
-    columns. Includes  a 'huxreg' function for creation of regression tables, and 'quick_*'  one-liners
-    to print data to a new document.
+  summary: Like 'xtable', creates styled tables. Export to HTML, LaTeX, 'Word',  'Excel', 'PowerPoint' and RTF. Simple, modern interface to manipulate  borders, size, position, captions, colours, text styles and number formatting. Table cells can span multiple rows and/or columns. Includes  a 'huxreg' function for creation
+    of regression tables, and 'quick_*'  one-liners to print data to a new document.
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
