@@ -25,6 +25,7 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
+    - r-r6
     - r-assertthat
     - r-commonmark
     - r-generics
@@ -33,8 +34,10 @@ requirements:
     - r-rlang
     - r-stringr >=1.2.0
     - r-tidyselect
+    - r-xml2
   run:
     - r-base
+    - r-r6
     - r-assertthat
     - r-commonmark
     - r-generics
@@ -43,6 +46,7 @@ requirements:
     - r-rlang
     - r-stringr >=1.2.0
     - r-tidyselect
+    - r-xml2
 
 test:
   commands:
