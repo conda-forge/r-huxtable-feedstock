@@ -5,11 +5,9 @@ Home: https://hughjonesd.github.io/huxtable
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-huxtable-feedstock/blob/master/LICENSE.txt)
 
 Summary: Like 'xtable', creates styled tables. Export to HTML, LaTeX, 'Word',  'Excel', 'PowerPoint' and RTF. Simple, modern interface to manipulate  borders, size, position, captions, colours, text styles and number formatting. Table cells can span multiple rows and/or columns. Includes  a 'huxreg' function for creation of regression tables, and 'quick_*'  one-liners to print data to a new document.
-
-
 
 Current build status
 ====================
