@@ -1,4 +1,4 @@
-{% set version = "5.4.0" %}
+{% set version = "5.5.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/huxtable_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/huxtable/huxtable_{{ version }}.tar.gz
-  sha256: 66994e2ba8e32a06122db06c073d9e34fbcf431d3f66493c6edcae05fe1d1fae
+  sha256: 1bcdc71bb4f3499ce0036c8db9d90664281bcc02c8c857be91f4e7db17548575
 
 build:
   merge_build_host: true  # [win]
@@ -23,15 +23,19 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-r6
     - r-assertthat
     - r-commonmark
+    - r-fansi
     - r-generics
     - r-glue
+    - r-htmltools
     - r-memoise
     - r-rlang
+    - r-stringi
     - r-stringr >=1.2.0
     - r-tidyselect
     - r-xml2
@@ -40,10 +44,13 @@ requirements:
     - r-r6
     - r-assertthat
     - r-commonmark
+    - r-fansi
     - r-generics
     - r-glue
+    - r-htmltools
     - r-memoise
     - r-rlang
+    - r-stringi
     - r-stringr >=1.2.0
     - r-tidyselect
     - r-xml2
