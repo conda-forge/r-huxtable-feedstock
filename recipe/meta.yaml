@@ -23,15 +23,19 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-r6
     - r-assertthat
     - r-commonmark
+    - r-fansi
     - r-generics
     - r-glue
+    - r-htmltools
     - r-memoise
     - r-rlang
+    - r-stringi
     - r-stringr >=1.2.0
     - r-tidyselect
     - r-xml2
@@ -40,10 +44,13 @@ requirements:
     - r-r6
     - r-assertthat
     - r-commonmark
+    - r-fansi
     - r-generics
     - r-glue
+    - r-htmltools
     - r-memoise
     - r-rlang
+    - r-stringi
     - r-stringr >=1.2.0
     - r-tidyselect
     - r-xml2
