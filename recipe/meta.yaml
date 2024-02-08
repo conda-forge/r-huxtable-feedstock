@@ -1,4 +1,4 @@
-{% set version = "5.5.3" %}
+{% set version = "5.5.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/huxtable_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/huxtable/huxtable_{{ version }}.tar.gz
-  sha256: 51deaf2fb3c45960cfa887984fac6fe861cf1132469f0b1a0061bff9571e2b92
+  sha256: 1c660afe1df96c9d143bc1afc05663724424cf7119c61daebe18a24370f18b24
 
 build:
   merge_build_host: true  # [win]
