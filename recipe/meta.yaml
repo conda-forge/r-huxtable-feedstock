@@ -1,6 +1,5 @@
 {% set version = "5.5.6" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-huxtable
@@ -13,8 +12,7 @@ source:
   sha256: bd555021a21ebee2884c1fe5e0c90f56ea02d88a3e4eb3862848c8f810b30b12
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
