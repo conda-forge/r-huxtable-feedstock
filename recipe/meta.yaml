@@ -1,4 +1,4 @@
-{% set version = "5.5.6" %}
+{% set version = "5.5.7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/huxtable_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/huxtable/huxtable_{{ version }}.tar.gz
-  sha256: bd555021a21ebee2884c1fe5e0c90f56ea02d88a3e4eb3862848c8f810b30b12
+  sha256: de4ce002df36dc43e67e526fcc79d753371bf7d8ac04e78bc8ba8fce3e512a5e
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
