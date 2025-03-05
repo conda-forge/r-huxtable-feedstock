@@ -1,4 +1,4 @@
-{% set version = "5.5.7" %}
+{% set version = "5.6.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/huxtable_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/huxtable/huxtable_{{ version }}.tar.gz
-  sha256: de4ce002df36dc43e67e526fcc79d753371bf7d8ac04e78bc8ba8fce3e512a5e
+  sha256: a603ef91e66778f2064c78dbc4615b1de44abd9d658fef527e5ce3dfbf406c99
 
 build:
   number: 0
