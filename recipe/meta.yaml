@@ -1,4 +1,4 @@
-{% set version = "5.8.0" %}
+{% set version = "6.0.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/huxtable_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/huxtable/huxtable_{{ version }}.tar.gz
-  sha256: 7c5ccca5debe9d5a9b11f802c9111d4a213aa53ccfb0515055482936557e522c
+  sha256: c8a5ab1a6bcf1701953e1881907bf8194c9a64e4768fc5fc2972233b690752b0
 
 build:
   number: 0
@@ -61,8 +61,8 @@ test:
 about:
   home: https://hughjonesd.github.io/huxtable
   license: MIT
-  summary: Like 'xtable', creates styled tables. Export to HTML, LaTeX, 'Word',  'Excel', 'PowerPoint' and RTF. Simple, modern interface to manipulate  borders, size, position, captions, colours, text styles and number formatting. Table cells can span multiple rows and/or columns. Includes  a 'huxreg' function for creation
-    of regression tables, and 'quick_*'  one-liners to print data to a new document.
+  summary: Like 'xtable', creates styled tables. Export to HTML, LaTeX, 'Word',  'Excel', 'PowerPoint' and RTF. Simple, modern interface to manipulate  borders, size, position, captions, colours, text styles and number formatting. Table cells can span multiple rows and/or columns. Includes  a 'huxreg' function for 
+    creation of regression tables, and 'quick_*'  one-liners to print data to a new document.
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
